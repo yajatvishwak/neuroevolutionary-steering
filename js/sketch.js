@@ -27,7 +27,8 @@ function draw() {
   for (let wall of walls) {
     wall.show();
   }
-  particle.update(mouseX, mouseY);
+  particle.applyForce(createVector(0, -1))
+  particle.update();
   particle.show();
   particle.look(walls);
 
